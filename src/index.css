@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navlink {
+  @apply flex gap-4 px-3 py-3 rounded-full hover:bg-gray-300 items-center;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
+@layer utilities {
+  .h-dvh-screen {
+    height: 100vh; /* fallback for Opera, IE and etc. */
+    height: 100dvh;
+  }
+}
